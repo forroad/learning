@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String user_id;
+    private Integer user_id;
     @Column
     private String username;
     @Column
@@ -18,11 +18,11 @@ public class User {
     @OneToMany(targetEntity = Course.class)
     private List<Course> courses;
 
-    public String getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(String user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 

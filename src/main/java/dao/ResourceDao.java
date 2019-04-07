@@ -1,24 +1,22 @@
 package dao;
 
-import bean.Course;
+import bean.Resource;
 import org.hibernate.Session;
 import util.HibernateUtil;
 
-import java.util.zip.CheckedOutputStream;
+public class ResourceDao {
 
-public class CourseDao {
-
-    //课程添加或修改
-    public boolean saveCourse(Course course){
+    //资源保存
+    public boolean saveResource(Resource resource){
         Session session = null;
         try{
             session = HibernateUtil.getSession();
             session.beginTransaction();
-            session.save(course);
+            session.save(resource);
             session.getTransaction().commit();
         }catch (Exception e){
             if(session != null) session.getTransaction().rollback();
-            System.out.println("课程保存失败");
+            System.out.println("资源保存失败");
             e.printStackTrace();
             return false;
         }finally {
@@ -27,17 +25,17 @@ public class CourseDao {
         return true;
     }
 
-    //课程删除
-    public boolean deleteCourse(Course course){
+    //资源删除
+    public boolean deleteResource(Resource resource){
         Session session = null;
         try{
             session = HibernateUtil.getSession();
             session.beginTransaction();
-            session.delete(course);
+            session.delete(resource);
             session.getTransaction().commit();
         }catch (Exception e){
             if(session != null) session.getTransaction().rollback();
-            System.out.println("课程删除失败");
+            System.out.println("资源删除失败");
             e.printStackTrace();
             return false;
         }finally {
@@ -46,21 +44,21 @@ public class CourseDao {
         return true;
     }
 
-    //修改课程
-    public boolean modifyCourse(Course course){
+    //修改资源
+    public boolean modifyCourse(Resource resource){
         Session session = null;
         try{
             session = HibernateUtil.getSession();
             session.beginTransaction();
-            Course course_1 = session.get(Course.class,course.getCourse_id());
-            course_1.setCourseName(course.getCourseName());
-            course_1.setTeacher(course.getTeacher());
-            course_1.setResources(course.getResources());
+            Resource resource_1 = session.get(Resource.class,resource.getResource_id());
+            resource_1.setResourceName(resource.getResourceName());
+            resource_1.setCatalog(resource.getCatalog());
+            resource_1.setDescription(resource.getDescription());
             session.flush();
             session.getTransaction().commit();
         }catch (Exception e){
             if(session != null) session.getTransaction().rollback();
-            System.out.println("课程修改失败");
+            System.out.println("资源修改失败");
             e.printStackTrace();
             return false;
         }finally {
