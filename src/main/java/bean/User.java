@@ -15,9 +15,6 @@ public class User {
     private String password;
     @Column
     private String salt;
-    @OneToMany(targetEntity = Course.class)
-    private List<Course> courses;
-
     public Integer getUser_id() {
         return user_id;
     }
@@ -48,13 +45,5 @@ public class User {
 
     public void setSalt(String salt) {
         this.salt = salt;
-    }
-
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
     }
 }

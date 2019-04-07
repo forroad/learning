@@ -14,6 +14,8 @@ public class Resource {
     private String description;
     @Column
     private String catalog;
+    @Column
+    private Integer course_id;
 
     public Integer getResource_id() {
         return resource_id;
@@ -21,6 +23,14 @@ public class Resource {
 
     public void setResource_id(Integer resource_id) {
         this.resource_id = resource_id;
+    }
+
+    public Integer getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(Integer course_id) {
+        this.course_id = course_id;
     }
 
     public String getResourceName() {

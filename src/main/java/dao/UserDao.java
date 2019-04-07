@@ -58,7 +58,6 @@ public class UserDao {
             user_1.setUsername(user.getUsername());
             user_1.setPassword(user.getPassword());
             user_1.setSalt(user.getSalt());
-            user_1.setCourses(user.getCourses());
             session.flush();
             session.getTransaction().commit();
         }catch (Exception e){
@@ -88,7 +87,7 @@ public class UserDao {
             session.getTransaction().commit();
         }catch (Exception e){
             if(session != null) session.getTransaction().rollback();
-            System.out.println("用户删除失败");
+            System.out.println("用户查询失败");
             e.printStackTrace();
             return null;
         }finally {

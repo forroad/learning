@@ -3,4 +3,104 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.account.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>servlet.account.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModifyPasswordServlet</servlet-name>
+        <servlet-class>servlet.account.ModifyPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyPasswordServlet</servlet-name>
+        <url-pattern>/modifyPassword.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <servlet-class>servlet.course.AddCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <url-pattern>/addCourse.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteCourseServlet</servlet-name>
+        <servlet-class>servlet.course.DeleteCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCourseServlet</servlet-name>
+        <url-pattern>/deleteCourse.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModifyCourseServlet</servlet-name>
+        <servlet-class>servlet.course.ModifyCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyCourseServlet</servlet-name>
+        <url-pattern>/modifyCourse.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindAllCourseServlet</servlet-name>
+        <servlet-class>servlet.course.FindAllCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindAllCourseServlet</servlet-name>
+        <url-pattern>/findAllCourse.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddResourceServlet</servlet-name>
+        <servlet-class>servlet.resource.AddResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddResourceServlet</servlet-name>
+        <url-pattern>/addResource.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteResourceServlet</servlet-name>
+        <servlet-class>servlet.resource.DeleteResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteResourceServlet</servlet-name>
+        <url-pattern>/deleteResource.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModifyResourceServlet</servlet-name>
+        <servlet-class>servlet.resource.ModifyResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyResourceServlet</servlet-name>
+        <url-pattern>/modifyResource.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindAllResourceServlet</servlet-name>
+        <servlet-class>servlet.resource.FindAllResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindAllResourceServlet</servlet-name>
+        <url-pattern>/findAllResource.do</url-pattern>
+    </servlet-mapping>
+
 </web-app>

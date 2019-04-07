@@ -14,8 +14,8 @@ public class Course {
     private String courseName;
     @Column
     private String teacher;
-    @OneToMany(targetEntity = Resource.class)
-    private List<Resource> resources;
+    @Column
+    private Integer user_id;
 
     public Integer getCourse_id() {
         return course_id;
@@ -23,6 +23,14 @@ public class Course {
 
     public void setCourse_id(Integer course_id) {
         this.course_id = course_id;
+    }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getCourseName() {
@@ -39,13 +47,5 @@ public class Course {
 
     public void setTeacher(String teacher) {
         this.teacher = teacher;
-    }
-
-    public List<Resource> getResources() {
-        return resources;
-    }
-
-    public void setResources(List<Resource> resources) {
-        this.resources = resources;
     }
 }
